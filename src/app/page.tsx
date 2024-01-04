@@ -15,7 +15,6 @@ function MbtiToggle() {
     else if (newType === "T" || newType === "F") newMbti[2] = newType;
     else if (newType === "J" || newType === "P") newMbti[3] = newType;
     setMbti(newMbti);
-    console.log(newMbti);
   };
 
   return (
