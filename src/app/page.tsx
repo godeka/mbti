@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import Image from "next/image";
 
 interface Props {
   mbti: string[];
@@ -81,12 +82,19 @@ function MbtiToggle({ mbti, setMbti }: Props) {
   );
 }
 
+function MbtiImg({ mbti }: { mbti: string[] }) {
+  let mbtiStr = mbti.join("");
+  let src = "/" + mbtiStr + ".jpg";
+  return <Image src={src} width={500} height={500} alt="" />;
+}
+
 export default function Home() {
   const [mbti, setMbti] = useState<string[]>(["I", "S", "T", "P"]);
 
   return (
     <>
       <MbtiToggle mbti={mbti} setMbti={setMbti} />
+      <MbtiImg mbti={mbti} />
     </>
   );
 }
