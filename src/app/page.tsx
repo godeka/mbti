@@ -3,13 +3,13 @@ import React, { useState } from "react";
 import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
 
 function MbtiToggle() {
-  const [mbti, setMbti] = useState(["I", "S", "T", "P"]);
+  const [mbti, setMbti] = useState<string[]>(["I", "S", "T", "P"]);
 
   const handleMbti = (
     event: React.MouseEvent<HTMLElement>,
     newType: string
   ) => {
-    let newMbti = [...mbti];
+    let newMbti: string[] = [...mbti];
     if (newType === "I" || newType === "E") newMbti[0] = newType;
     else if (newType === "N" || newType === "S") newMbti[1] = newType;
     else if (newType === "T" || newType === "F") newMbti[2] = newType;
