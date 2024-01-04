@@ -26,6 +26,7 @@ function MbtiToggle({ mbti, setMbti }: Props) {
         value={mbti[0]}
         orientation="vertical"
         exclusive
+        size="large"
         onChange={handleMbti}
         aria-label="I_E"
       >
@@ -40,6 +41,7 @@ function MbtiToggle({ mbti, setMbti }: Props) {
         value={mbti[1]}
         orientation="vertical"
         exclusive
+        size="large"
         onChange={handleMbti}
         aria-label="N_S"
       >
@@ -54,6 +56,7 @@ function MbtiToggle({ mbti, setMbti }: Props) {
         value={mbti[2]}
         orientation="vertical"
         exclusive
+        size="large"
         onChange={handleMbti}
         aria-label="T_F"
       >
@@ -68,6 +71,7 @@ function MbtiToggle({ mbti, setMbti }: Props) {
         value={mbti[3]}
         orientation="vertical"
         exclusive
+        size="large"
         onChange={handleMbti}
         aria-label="J_P"
       >
