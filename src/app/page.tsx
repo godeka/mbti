@@ -2,9 +2,11 @@
 import React, { useState } from "react";
 import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
 
-function MbtiToggle() {
-  const [mbti, setMbti] = useState<string[]>(["I", "S", "T", "P"]);
-
+interface Props {
+  mbti: string[];
+  setMbti: React.Dispatch<React.SetStateAction<string[]>>;
+}
+function MbtiToggle({ mbti, setMbti }: Props) {
   const handleMbti = (
     event: React.MouseEvent<HTMLElement>,
     newType: string
@@ -80,9 +82,11 @@ function MbtiToggle() {
 }
 
 export default function Home() {
+  const [mbti, setMbti] = useState<string[]>(["I", "S", "T", "P"]);
+
   return (
     <>
-      <MbtiToggle />
+      <MbtiToggle mbti={mbti} setMbti={setMbti} />
     </>
   );
 }
